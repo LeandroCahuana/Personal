@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    background-image: url(/Reto/Img/6d16a2ea98382ce8794a062d706d5ba1.jpg)
+}
+h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(125, 11, 255);
+}
+table{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 8px;
+    background-color: rgb(99, 136, 136);
+    margin: 0 50px;
+}
+td{
+    border: 2px;
+    border-color: black;
+    background-color: aquamarine;
+    padding: 0 5px;
+}
+form{
+    width: 1250px;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+    text-align: center;
+    background-color: aliceblue;
+    display: inline-block;
+    
+}
+form input{
+    margin: 0 30px;
+    font-size: large;
+}
+form p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.formulario{
+    text-align: center;
+}
+.nombre{
+    border-radius: 5px;
+    width: 350px;
+    height: 20px;
+    background-color: rgb(255, 215, 248);
+    border-color: rgb(199, 147, 158);
+}
+.fecha{
+    border-radius: 5px;
+    width: 150px;
+    height: 20px;
+    background-color: rgb(255, 215, 248);
+    text-align: center;
+    border-color: rgb(199, 147, 158);
+}
+.lista{
+    border-radius: 5px;
+    width: 350px;
+    height: 20px;
+    background-color: rgb(255, 215, 248);
+    border-color: rgb(199, 147, 158);
+}
+.enviar{
+    border-color: rgb(199, 147, 158);
+    background-color: rgb(255, 215, 248);
+    border-radius: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.descripcion{
+    text-align: justify;
+}
