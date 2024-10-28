@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4ODS</title>
     <link rel="stylesheet" href="CSS/ods4.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/loader.css">
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <link rel="stylesheet" href="CSS/buttonHome.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap">
 </head>
@@ -29,7 +33,7 @@
         <img class="imagen-portada" src="resources/img/fondo-ods4.jpg">
         <div class="titulo">Educación de Calidad</div>
     </div>
-    <div class="primera-parte">
+    <section class="primera-parte">
         <div class="grupo">
             <div class="introduccion">Se busca de aquí al 2030, mejorar la calidad y equidad en el nivel de educación
                 primaria y secundaria, proporcionando a todos los niños y niñas el acceso a una buena formación
@@ -38,8 +42,8 @@
             <img class="imagen-introduccion"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB7EPds2stRIXNInIbWlRxTB8fPchDzd_vuA&s">
         </div>
-    </div>
-    <div class="segunda-parte">
+    </section>
+    <section class="segunda-parte">
         <h2>Metas para el 2030...</h2>
         <div class="card1">
             <div class="card_int_left">
@@ -91,9 +95,9 @@
                     otros.</div>
             </div>
         </div>
-    </div>
+    </section>
     <div class="title-carrusel">¿Cómo podemos ayudar?</div>
-    <div class="tercera-parte">
+    <section class="tercera-parte">
         <div class="carrusel">
             <div class="slider-wrapper">
                 <button id="prev-slide" class="slide-button material-symbols-rounded">chevron_left</button>
@@ -113,7 +117,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <button onclick="topFunction()" id="myBtn" title="Ir al inicio"><img src="resources/logos/flecha.png"></button>
     <footer>
         <div class="footer-logo">
             <a href="index.html"><img src="resources/logos/logo-IMT.png"></a>
@@ -140,15 +145,14 @@
     </footer>
 
     <!--Scripts-->
-
     <!--Navbar-->
     <script src="JS/navbarAnimation.js"></script>
-
     <!--Carrusel-->
     <script src="JS/carousel.js"></script>
-
     <!--loader-->
     <script src="JS/loader.js"></script>
+    <!--HOME-BUTTON-->
+    <script src="JS/homeButton.js"></script>
 </body>
 
 </html>

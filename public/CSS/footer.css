@@ -1,0 +1,57 @@
+footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #252627;
+    font-size: 30px;
+    padding: 50px 0 300px 0;
+    text-decoration: none;
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+    box-sizing: border-box;
+}
+footer .footer-logo{
+    display: inline;
+    width: 30%;
+}
+footer .footer-logo img {
+    height: 150px;
+}
+footer .footer-datos{
+    display: inline;
+    width: 30%;
+}
+footer .footer-datos ol ul {
+    margin-bottom: 30px;
+}
+footer .footer-datos ol ul a {
+    text-decoration: none;
+    color: white;
+}
+footer .footer-contacto{
+    display: inline;
+    width: 30%;
+    text-align: center;
+    font-size: 50px;
+}
+footer .footer-contacto a {
+    text-decoration: none;
+    color: white;
+}
+footer .footer-line {
+    width: 85%;
+    height: 1px;
+    position: absolute;
+    top: 400px;
+    background-color: white;
+}
+footer .box-redes {
+    position: absolute;
+    top: 450px;
+}
+footer .box-redes a {
+    margin-left: 150px;
+}
