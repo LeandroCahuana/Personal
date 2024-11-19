@@ -9,8 +9,8 @@ COLLATE utf8mb4_spanish_ci;
 -- SINTAXIS: USE nombre_base_datos;
 USE IMT_Contact_DB;
 
-# VISUALIZAR LA BASE DE DATOS
-SHOW DATABASES;
+## VISUALIZAR LA BASE DE DATOS
+# SHOW DATABASES;
 
 # CREACIÓN DE LAS TABLAS
 -- Una vez creada la base de datos, creamos las tablas a utilizar
@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS user(
     lastname varchar(100) not null COMMENT 'Contiene los apellidos del usuario',
     email varchar(120) COMMENT 'Correo del usuario',
     cellphone char(9) not null COMMENT 'Número de celular del usuario',
+    consultation varchar(400) not null COMMENT 'Descripción de la consulta que se realiza',
     state char(1) DEFAULT 'A' COMMENT '(A) activo | (I) inactivo',
     CONSTRAINT pk_user PRIMARY KEY (id)
 ) ENGINE=InnoDB;
@@ -32,7 +33,6 @@ CREATE TABLE IF NOT EXISTS consultation(
 	id int auto_increment not null COMMENT 'Identificador unico para cada consulta',
     consultation_date timestamp DEFAULT current_timestamp COMMENT 'Contiene la fecha y hora en que se registra la consulta',
     user int not null COMMENT 'Identificador del usuario previamente registrado',
-    consultation varchar(400) not null COMMENT 'Descripción de la consulta que se realiza',
     agent int not null COMMENT 'Identificador del agente quien atiende la consulta',
     answer varchar(500) not null COMMENT 'Contiene la respuesta de atención del agente',
     state char(1) DEFAULT 'A' COMMENT '(A) Activa | (P) Pendiente',
@@ -52,31 +52,31 @@ CREATE TABLE IF NOT EXISTS agent(
 )ENGINE=InnoDB;
 
 ## VISUALIZAR LAS TABLAS
-SHOW TABLES;
+# SHOW TABLES;
 
 ## DESCRIPCIÓN DE LAS TABLAS
 -- SINTAXIS: DESCRIBE nombre_tabla;
 -- EJEMPLOS:
 -- Descripción de la tabla "user"
-DESCRIBE user;
+# DESCRIBE user;
 
 -- Descripción de la tabla "consultation"
-DESCRIBE consultation;
+# DESCRIBE consultation;
 
 -- Descripción de la tabla "agent"
-DESCRIBE agent;
+# DESCRIBE agent;
 
 ## INFORMACIÓN DE LAS TABLAS
 -- SINTAXIS: SHOW TABLE STATUS LIKE 'nombre_tabla';
 -- EJEMPLOS:
 -- Información de la tabla "user";
-SHOW TABLE STATUS LIKE 'user';
+# SHOW TABLE STATUS LIKE 'user';
 
 -- Información de la tabla "consultation";
-SHOW TABLE STATUS LIKE 'consultation';
+# SHOW TABLE STATUS LIKE 'consultation';
 
 -- Información de la tabla "agent";
-SHOW TABLE STATUS LIKE 'agent';
+# SHOW TABLE STATUS LIKE 'agent';
 
 ## CREACIÓN DE LAS RELACIONES
 -- SINTAXIS: ALTER TABLE nombre_tabla ADD CONSTRAINT nombre_relacion FOREIGN KEY (campo_FK) REFERENCES nombre_tabla(nombre_PK);
@@ -91,7 +91,7 @@ ADD CONSTRAINT fk_agent_consultation
 FOREIGN KEY (agent) REFERENCES agent (id);
 
 # VISUALIZAR LAS RELACIONES CREADAS
-SELECT
+/*SELECT
 	kcu.CONSTRAINT_NAME AS 'Nombre de la relación',
     kcu.REFERENCED_TABLE_NAME AS 'Tabla Padre',
     kcu.REFERENCED_COLUMN_NAME AS 'Primary Key',
@@ -102,20 +102,20 @@ FROM
 WHERE
 	kcu.TABLE_SCHEMA = 'IMT_Contact_DB'
     AND kcu.REFERENCED_TABLE_NAME IS NOT NULL;
-
+*/
 ## ELIMINACIÓN DE ESTRUCTURAS
 # ELIMINACIÓN DE LA BASE DE DATOS
 -- SINTAXIS: DROP DATABASE IF EXISTS nombre_base_datos;
 -- EJEMPLO: Eliminación de la base de datos "IMT_Contact_DB"
-DROP DATABASE IF EXISTS IMT_Contact_DB;
+# DROP DATABASE IF EXISTS IMT_Contact_DB;
 
 # ELIMINACIÓN DE LAS TABLAS
 -- SINTAXIS: DROP TABLE IF EXISTS nombre_tabla;
 -- EJEMPLO: Eliminación de la tabla "user"
-DROP TABLE IF EXISTS user;
+# DROP TABLE IF EXISTS user;
 
 -- Eliminación de la tabla "consultation"
-DROP TABLE IF EXISTS consultation;
+# DROP TABLE IF EXISTS consultation;
 
 -- Eliminación de la tabla "agent"
-DROP TABLE IF EXISTS agent;
+# DROP TABLE IF EXISTS agent;
