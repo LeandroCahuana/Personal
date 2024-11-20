@@ -1,5 +1,5 @@
 const formulario = document.getElementById('form');
-const inputs = document.querySelectorAll('#form input');
+const inputs = document.querySelectorAll('#form input, #form textarea');
 const expresiones = {
 	usuario: /^[a-zA-ZÀ-ÿ\s]{10,54}$/,
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
