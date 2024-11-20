@@ -1,0 +1,173 @@
+body{
+    margin: 0;
+    background-color: #ffffff;
+}
+h1 {
+    display: inline;
+    color: white;
+    padding: 15px 55px;
+    background-color: #252627;
+    border-radius: 40px;
+}
+.space-navbar {
+    background-color: #252627;
+    width: 100%;
+    height: 150px;
+    position: relative;
+}
+.tittle{
+    display: block;
+    text-align: center;
+}
+.history{
+    background-image: url(/public/resources/img/fondo-history.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 40px;
+    background-size: cover;
+    height: 900px;
+    align-items: center;
+    justify-content: center;
+}
+.history .box-history{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.history .box-history p {
+    background-color: #98d2ebc5;
+    padding: 40px;
+    width: 900px;
+    height: 600px;
+    font-size: 30px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 2560px) {
+    h1 {
+        padding: 15px 55px;
+        border-radius: 40px;
+        font-size: 50px;
+    }
+    .history{
+        padding-top: 60px;
+        height: 900px;
+    }
+    .history .box-history p {
+        padding: 70px;
+        margin-left: 100px;
+        margin-right: 100px;
+        width: max-content;
+        height: max-content;
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 2275px) {
+    h1 {
+        padding: 17px 65px;
+        background-color: #252627;
+        border-radius: 40px;
+        font-size: 40px;
+    }
+    .history{
+        padding-top: 60px;
+        height: 800px;
+    }
+    .history .box-history p {
+        margin-top: 60px;
+        padding: 60px;
+        margin-left: 100px;
+        margin-right: 100px;
+        width: max-content;
+        height: max-content;
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    h1 {
+        padding: 15px 55px;
+        background-color: #252627;
+        border-radius: 40px;
+        font-size: 30px;
+    }
+    .history{
+        padding-top: 60px;
+        height: 850px;
+    }
+    .history .box-history p {
+        margin-top: 60px;
+        padding: 40px;
+        margin-left: 100px;
+        margin-right: 100px;
+        width: max-content;
+        height: max-content;
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    h1 {
+        padding: 15px 55px;
+        background-color: #252627;
+        border-radius: 40px;
+        font-size: 40px;
+    }
+    .history{
+        padding-top: 60px;
+        height: 700px;
+    }
+    .history .box-history p {
+        padding: 40px;
+        margin-left: 100px;
+        margin-right: 100px;
+        width: max-content;
+        height: max-content;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    h1 {
+        padding: 15px 55px;
+        background-color: #252627;
+        border-radius: 40px;
+        font-size: 30px;
+    }
+    .history{
+        padding-top: 60px;
+        height: 700px;
+    }
+    .history .box-history p {
+        margin-top: 60px;
+        padding: 40px;
+        margin-left: 100px;
+        margin-right: 100px;
+        width: max-content;
+        height: max-content;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        padding: 15px 55px;
+        background-color: #252627;
+        border-radius: 40px;
+        font-size: 20px;
+    }
+    .history{
+        padding-top: 40px;
+        height: 600px;
+    }
+    .history .box-history p {
+        margin-top: 60px;
+        padding: 40px;
+        margin-left: 100px;
+        margin-right: 100px;
+        width: max-content;
+        height: max-content;
+        font-size: 20px;
+    }
+}
