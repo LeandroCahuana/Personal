@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/buttonHome.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
-    <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap">
 </head>
 <body>
     <div class="box-loader" id="loader-box">
@@ -19,18 +20,18 @@
             <div class="loader-2"></div>
         </div>
     </div>
-    <div id="navbar">
+    <nav id="navbar">
         <a href="index.html" id="logo"><img src="resources/logos/logo-IMT.png"></a>
         <div id="navbar-right">
             <a href="educDeCalidad.html">4ODS</a>
             <a href="">¿Como contribuir?</a>
             <a class="active" href="Contact.html">Contacto</a>
         </div>
-    </div>
+    </nav>
     <section class="contact">
         <div class="box-contact">
             <div class="form-contact">
-                <form id="form" action="/regConsulta" method="post">
+                <form id="form">
                     <input id="nombres" type="text" required name="nombres" placeholder="Nombres" >
                     <p class="input__error" id="input__error__nombres">Los nombres deben estar conformados entre 10 a 54 dígitos y solo debe contener letras y tildes</p>
                     <input id="apellidos" type="text" required name="apellidos" placeholder="Apellidos">
@@ -39,7 +40,7 @@
                     <p class="input__error" id="input__error__celular">El número de celular debe contar con 9 dígitos</p>
                     <input id="correo" type="email" required name="correo" placeholder="Correo">
                     <p class="input__error" id="input__error__correo">El correo electronico debe contar con un @ y un .com</p>
-                    <input id="consulta" type="text" required name="consulta" placeholder="Consulta">
+                    <textarea name="consulta" maxlength="400" required id="consulta" placeholder="Consulta"></textarea>
                     <p class="input__error" id="input__error__consulta">Debe llenar la consulta</p>
                     <button id="button" type="submit"><span class="material-symbols-outlined">
                         arrow_forward
@@ -49,12 +50,13 @@
             <div class="info-contact">
                 <h1>CONTACTO</h1>
                 <h2>Dirección</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur.</p>
+                <p>San Vicente de Cañete, Lima, Perú.</p>
                 <h2>Correo</h2>
                 <p>Lorem ipsum dolor sit amet.</p>
                 <h2>Celular</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores.</p>
+                <p>+51 924 207 577</p>
+                <p>+51 912 159 151</p>
+                <p>+51 908 587 198</p>
                 <h2>Redes</h2>
                 <div class="logo-redes">
                     <a href=""><img src="resources/logos/bxl-twitter 1.png" alt="Twitter"></a>
