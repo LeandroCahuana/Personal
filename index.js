@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const mysql = require("mysql");
-const link = require("./config/link");
 let conexion = mysql.createConnection({
     host: "imt-database.clscwubwbk8o.us-east-1.rds.amazonaws.com",
     database: "IMT_Contact_DB",
@@ -31,7 +30,7 @@ app.post("/regConsulta", (req, res)=>{
             throw error;
         } else {
             console.log("Datos almacenados correctamente");
-            res.render("index",{link});
+            res.sendFile(__dirname + '/public/Contact.html');
         }
     })
 });
