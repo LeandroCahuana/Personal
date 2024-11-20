@@ -64,6 +64,7 @@ formulario.addEventListener("submit", (e) => {
 
     if (campos.nombres && campos.apellidos && campos.celular && campos.correo && campos.consulta) {
         formulario.reset();
+        formulario.submit();
         document.getElementById('confirmacion').classList.add('confirmacion__show');
         setTimeout(() => {
             document.getElementById("confirmacion").classList.remove('confirmacion__show')

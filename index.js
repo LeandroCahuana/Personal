@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const mysql = require("mysql");
+const link = require("./config/link");
 let conexion = mysql.createConnection({
     host: "imt-database.clscwubwbk8o.us-east-1.rds.amazonaws.com",
     database: "IMT_Contact_DB",
@@ -9,12 +10,8 @@ let conexion = mysql.createConnection({
 })
 const PORT = process.env.PORT || 3000;
 
-app.set("view engine", "ejs");
 app.use(express.json())
 app.use(express.urlencoded({extended:false}));
-app.get("/", (req,res)=>{
-    res.render("index")
-})
 
 app.post("/regConsulta", (req, res)=>{
     const datos = req.body;
@@ -34,6 +31,7 @@ app.post("/regConsulta", (req, res)=>{
             throw error;
         } else {
             console.log("Datos almacenados correctamente");
+            res.render("index",{link});
         }
     })
 });
