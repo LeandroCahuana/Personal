@@ -12,26 +12,43 @@ body{
 .contact .box-contact {
     padding: 20px;
     border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .contact .box-contact .form-contact {
     background-color: #f5f6f780;
     border-radius: 20px;
     padding: 50px;
-    display: inline-block;
-    margin-right: 50px;
     box-sizing: border-box;
+    height: 600px;
 }
 .contact .box-contact .form-contact form {
     width: 420px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: end;
 }
-.contact .box-contact .form-contact form input {
-    display: block;
+.contact .box-contact .form-contact form input, textarea {
     background-color: transparent;
     border-color: transparent;
     border-bottom-color: #C5C6C7;
     font-size: 20px;
-    margin-bottom: 20px;
+    width: 100%;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
+
+.contact .box-contact .form-contact form textarea {
+    resize: none;
+    min-width: 100%;
+    min-height: 100px;
+}
+
 .box-contact .form-contact form button {
     background-color: #151617;
     border-radius: 10px;
@@ -39,6 +56,7 @@ body{
     padding: 5px 20px;
     align-items: end;
     justify-content: end;
+    width: 100px;
 }
 .box-contact .form-contact button span {
     color: white;
@@ -53,15 +71,17 @@ body{
     font-weight: 100;
     font-style: normal;
 }
-.box-contact .box-redes a {
-    margin-right: 20px;
+.box-contact .logo-redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 .input__error {
-    width: 450px;
-    font-size: 15px;
+    width: 100%;
+    font-size: 13px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 20px;
     display: none;
+    margin-top: 10px;
 }
 .input__error__show {
     display: block;
