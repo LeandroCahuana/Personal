@@ -15,7 +15,7 @@ app.get("/", (req,res)=>{
     res.render("index")
 })
 
-app.post("/getConsulta", (req, res)=>{
+app.post("/regConsulta", (req, res)=>{
     const datos = req.body;
 
     let name = datos.nombres;
