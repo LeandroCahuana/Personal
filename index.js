@@ -2,17 +2,42 @@ const express = require("express");
 const app = express();
 const mysql = require("mysql");
 let conexion = mysql.createConnection({
-    host: "imt-database.clscwubwbk8o.us-east-1.rds.amazonaws.com",
-    database: "IMT_Contact_DB",
-    user: "admin",
-    password: "imt.data.2024"
+    host: "", /* hostname de la base de datos de contacto */
+    database: "", /* nombre de la base de datos de contacto */
+    user: "", /* nombre de usuario */
+    password: "" /* contraseña de la base de datos de contacto */
 })
-const PORT = process.env.PORT || 3000;
 
-app.use(express.json())
+let conexionCalendar = mysql.createConnection({
+    host: "", /* hostname de la base de datos del calendario */
+    database: "", /* nombre de la base de datos del calendario */
+    user: "", /* nombre de usuario */
+    password: "" /* contraseña de la base de datos del calendario */
+})
+
+const PORT = process.env.PORT || 3000;
+const IP = ""; /* IP Pública */
+
+app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
-app.post("/regConsulta", (req, res)=>{
+conexion.connect((err) => {
+    if (err) {
+        console.error("Error al conectar a la base de datos:", err);
+        return;
+    }
+    console.log("Conectado a la base de datos correctamente");
+});
+
+conexionCalendar.connect((err) => {
+    if (err) {
+        console.error("Error al conectar a la base de datos:", err);
+        return;
+    }
+    console.log("Conectado a la base de datos correctamente");
+});
+
+app.post("/regConsulta", function(req, res) {
     const datos = req.body;
     console.log(datos);
 
@@ -35,8 +60,26 @@ app.post("/regConsulta", (req, res)=>{
     })
 });
 
+app.get('/api/dates/:current', (req, res)=>{
+    var request = req.params.current;
+    conexionCalendar.query(
+        "select name_event, description_event, DATE_FORMAT(date_event, '%d/%m/%Y') AS date_event from calendar where date_event = '"+request+"'",
+        function (err, row, fields) {
+            if (err) {
+                throw err;
+            } else if (row[0] != null) {
+                res.json(
+                    row[0]
+                )
+            } else {
+                res.json(null)
+            }
+        }
+    )
+})
+
 app.use(express.static("public"));
 
 app.listen(PORT, ()=>{
-    console.log(`http://23.21.206.170:${PORT}`)
+    console.log(`http://${IP}:${PORT}`)
 })

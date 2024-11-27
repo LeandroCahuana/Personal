@@ -65,7 +65,7 @@ body{
 .box-contact .info-contact {
     display: inline-block;
     color: black;
-    height: 500px;
+    height: max-content;
     padding: 50px;
     font-family: "K2D", sans-serif;
     font-weight: 100;
