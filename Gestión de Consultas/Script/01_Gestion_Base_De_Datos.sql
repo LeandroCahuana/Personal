@@ -1,0 +1,29 @@
+## GESTIÓN DE LAS BASES DE DATOS
+
+# CREACIÓN DE LA BASE DE DATOS PARA CONSULTAS
+-- Utilizamos la sentencia CREATE para crear nuestra base de datos nombrada "IMT_Contact_DB"
+CREATE DATABASE IF NOT EXISTS IMT_Contact_DB
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_spanish_ci;
+
+# USAMOS LA BASE DE DATOS PREVIAMENTE CREADA
+-- SINTAXIS: USE nombre_base_datos;
+USE IMT_Contact_DB;
+
+# CREACIÓN DE LA BASE DE DATOS PARA EL CALENDARIO DE FECHAS CÍVICAS
+-- Utilizamos la sentencia CREATE para crear nuestra base de datos nombrada "IMT_Calendar_DB"
+CREATE DATABASE IF NOT EXISTS IMT_Calendar_DB
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_spanish_ci;
+
+# USAMOS LA BASE DE DATOS PREVIAMENTE CREADA
+-- SINTAXIS: USE nombre_base_datos;
+USE IMT_Calendar_DB;
+
+##ELIMINACIÓN DE LAS BASES DE DATOS
+-- SINTAXIS: DROP DATABASE nombre_base_de_datos;
+# DROP DATABASE IMT_Contact_DB;
+# DROP DATABASE IMT_Calendar_DB;
+
+## VISUALIZAR LA BASE DE DATOS
+# SHOW DATABASES;
