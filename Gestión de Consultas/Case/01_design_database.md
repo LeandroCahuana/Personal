@@ -2,7 +2,7 @@
 
 ## Diseño Lógico
 
-![Diseño Lógico de base de datos](/Resources/T10_contacto_DL.png)
+![Diseño Lógico de base de datos](/Gestión%20de%20consultas/Resources/T10_contacto_DL.png)
 
 ## Diseño Físico
 
