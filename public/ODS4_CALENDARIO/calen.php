@@ -1,11 +1,11 @@
 <?php
-$host = 'localhost'; // Servidor de la base de datos.
-$user = 'root'; // Usuario de la base de datos.
-$password = '23032007lu'; // Contraseña del usuario.
-$database = 'calendario'; // Nombre de la base de datos.
+$host = 'localhost'; // Si estás trabajando en un servidor local.
+$user = 'root'; // El nombre de usuario que has creado para la base de datos.
+$password = '23032007'; // La contraseña del usuario de MySQL.
+$database = 'mysql_db'; // Nombre de la base de datos.
 
 // Crear conexión
-$conn = new mysqli($host, $user, $password, $database);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verificar conexión
 if ($conn->connect_error) {
@@ -14,12 +14,12 @@ if ($conn->connect_error) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     // Obtener eventos
-    $sql = "SELECT titulo, fecha FROM eventos";
+    $sql = "SELECT * FROM eventos";
     $result = $conn->query($sql);
 
     $eventos = [];
     if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
+        while($row = $result->fetch_assoc()) {
             $eventos[] = $row;
         }
     }
@@ -27,24 +27,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Agregar evento
     $titulo = $_POST['titulo'];
-    $descripcion = $_POST['descripcion'];
-    $fecha = $_POST['fecha'];
-
-    if (!empty($titulo) && !empty($fecha)) {
-        $stmt = $conn->prepare("INSERT INTO eventos (titulo, descripcion, fecha) VALUES (?, ?, ?)");
-        $stmt->bind_param("sss", $titulo, $descripcion, $fecha);
-
-        if ($stmt->execute()) {
-            echo "Evento agregado exitosamente.";
-        } else {
-            echo "Error al agregar evento: " . $stmt->error;
-        }
-
-        $stmt->close();
-    } else {
-        echo "Título y fecha son obligatorios.";
-    }
+    $descripcion = $_POST['
 }
-
-$conn->close();
-?>

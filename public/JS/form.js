@@ -1,7 +1,8 @@
 const formulario = document.getElementById('form');
 const inputs = document.querySelectorAll('#form input, #form textarea');
 const expresiones = {
-	usuario: /^[a-zA-ZÀ-ÿ\s]{10,54}$/,
+	usuario: /^[a-zA-ZÀ-ÿ\s]{3,54}$/,
+    apellido: /^[a-zA-ZÀ-ÿ\s]{10,54}$/,
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	celular: /^\d{9}$/,
     consulta: /^\d{0}$/
@@ -24,7 +25,7 @@ const validarFormulario = (e) => {
             validarCampo(expresiones.usuario, e.target, "nombres")
         break;
         case "apellidos":
-            validarCampo(expresiones.usuario, e.target, "apellidos")
+            validarCampo(expresiones.apellido, e.target, "apellidos")
         break;
         case "celular":
             validarCampo(expresiones.celular, e.target, "celular")

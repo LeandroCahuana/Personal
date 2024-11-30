@@ -18,6 +18,8 @@
         href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
 </head>
 
 <body>
@@ -29,6 +31,7 @@
     </div>
     <nav id="navbar">
         <a href="index.html" id="logo"><img src="resources/logos/logo-IMT.png"></a>
+        <button id="menu-navbar" class="button-navbar"><img src="resources/logos/logo-menu.png"></button>
         <div id="navbar-right">
             <a class="active" href="index.html">Inicio</a>
             <a href="Html/Nosotros.html">Nosotros</a>
@@ -37,10 +40,12 @@
             <a href="Html/Contact.html">Contactos</a>
         </div>
     </nav>
-    <div class="portada">
-        <img class="imagen-portada" src="resources/img/fondo-index.png">
-        <div class="titulo">Objetivos de Desarrollo Sostenible</div>
-    </div>
+    <div class="space-navbar"></div>
+    <header class="portada">
+        <div class="titulo">
+            <p>Objetivos de Desarrollo Sostenible</p>
+        </div>
+    </header>
     <section class="segunda-parte">
         <img src="resources/img/ods-index.jpg">
         <div class="box">
@@ -151,12 +156,16 @@
         <div class="links">
             <div class="footer-logo">
                 <a href="index.html"><img src="resources/logos/logo-IMT.png"></a>
+                <div class="contact-box2">
+                    <a class="contact-button2" href="Html/Contact.html">CONTACTO</a>
+                </div>
             </div>
             <div class="footer-datos">
                 <ol>
                     <ul><a href="Html/educDeCalidad.html">Educación de Calidad</a></ul>
                     <ul><a href="Html/Nosotros.html">SOBRE NOSOTROS</a></ul>
                     <ul><a href="Html/Productos.html">PRODUCTOS</a></ul>
+                    <ul><a href="Html/loginAgent.html">ADMINISTRACIÓN</a></ul>
                 </ol>
 
             </div>
@@ -181,6 +190,8 @@
     <script src="JS/navbarAnimation.js"></script>
     <!--LOADER-->
     <script src="JS/loader.js"></script>
+    <!--Menu-->
+    <script src="JS/menu.js"></script>
     <!--Calendario-->
     <script src="JS/calendario.js"></script>
 </body>

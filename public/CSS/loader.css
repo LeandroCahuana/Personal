@@ -1,4 +1,4 @@
-.box-loader{
+.box-loader {
     position: fixed;
     left: 0;
     top: 0;
@@ -10,12 +10,14 @@
     z-index: 9999;
     display: none;
 }
+
 .loader {
     position: relative;
     width: 80px;
     height: 80px;
     background-color: white;
 }
+
 .loader-1 {
     position: absolute;
     width: 100%;
@@ -24,8 +26,9 @@
     border-left-color: transparent;
     border-bottom: none;
     border-radius: 50%;
-    animation: loader_1 1s cubic-bezier(.17,.62,.87,.36) infinite;
+    animation: loader_1 1s cubic-bezier(.17, .62, .87, .36) infinite;
 }
+
 .loader-2 {
     position: absolute;
     width: 60px;
@@ -36,20 +39,24 @@
     border-radius: 50%;
     left: calc(50% - 30px);
     top: calc(50% - 30px);
-    animation: loader_2 1s cubic-bezier(.17,.62,.87,.36) infinite;
+    animation: loader_2 1s cubic-bezier(.17, .62, .87, .36) infinite;
 }
+
 @keyframes loader_1 {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
 }
+
 @keyframes loader_2 {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(-360deg);
     }
