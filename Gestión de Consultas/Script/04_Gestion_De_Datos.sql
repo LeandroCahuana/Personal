@@ -8,7 +8,20 @@ USE IMT_Contact_DB;
 -- SINTAXIS: INSERT INTO nombre_tabla (campos) VALUES (valores);
 -- EJEMPLOS:
 -- Registramos datos a la tabla "user"
-INSERT INTO user (name_user, lastname, email, cellphone, consultation) VALUES ("Carlos", "Perez", "carlos432@gmail.com", "985632741", "ConsultaEjemplo1");
+INSERT INTO user 
+(name_user, lastname, email, cellphone, consultation) 
+VALUES
+("Carlos", "Perez", "carlos432@gmail.com", "985632741", "Como puedo apoyar en esta ODS?"),
+("Juan", "Gonzales", "juan.gonzales@gmail.com", "956238942", "Formas de pago para los productos educativos"),
+("Luis", "Cesar", "luisC278@gmail.com", "954876321", "Quiero más información"),
+("Ana", "Huaman", "anahuaman23@yahoo.com", "925361489", "Pueden mejorar la paleta de colores"),
+("Maria", "Sanchez", "maria321@outlook.com", "959862347", "Formas de envío"),
+("Jaime", "Vilcapuma", "jaime.vilcapuma@gmail.com", "914259863", "Quiero conocer en que puedo aportar desde mi rol como estudiante"),
+("Karla", "López", "karlaLP232@gmail.com", "998567422", "Me pueden brindar información sobre como se esta avanzando con este objetivo"),
+("Julio", "Dominguez", "julioDC24@hotmail.com", "98856423", "Quiero conocer más sobre las actividades que se realizan a favor de este objetivo"),
+("Cecilia", "Fernández", "ceciliaFer212@gmail.com", "936362451", "Pueden tambien brindar tecnicas de estudio"),
+("Alexandra", "Quispe", "alexa.quis222@gmail.com", "985742635", "Pueden aumentar los productos que ofrecen")
+;
 
 -- Registramos datos a la tabla "agent"
 INSERT INTO agent
