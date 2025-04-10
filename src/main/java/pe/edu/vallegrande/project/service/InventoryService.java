@@ -10,8 +10,14 @@ public interface InventoryService {
 
     Optional<Inventory> findById(Long id);
 
+    List<Inventory> findAllByState(String state);
+
     Inventory save(Inventory customer);
 
     Inventory update(Inventory customer);
+
+    Inventory restore(Long id);
+
+    Inventory delete(Long id);
     
 }

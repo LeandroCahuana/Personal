@@ -24,8 +24,8 @@ public class Inventory {
     @Column(name = "name_product")
     private String name_product;
 
-    @Column(name = "amount")
-    private Long amount;
+    @Column(name = "amount_product")
+    private Long amount_product;
 
     @Column(name = "description_product")
     private String description_product;
